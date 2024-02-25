@@ -1,21 +1,8 @@
-<div class="flex flex-row min-h-screen overflow-hidden">
+<div class="flex overflow-hidden ">
   <app-menu></app-menu>
-  <div class="flex-grow bg-gray-20 w-full min-h">
-    <div class="container mx-auto mt-8 md:mt-0  md:space-x-10 md:grid grid-cols-3 justify-center md:py-40">
-      <div class="grid justify-center items-center order-1 col-span-1 ">
-        <img
-          src="https://image.freepik.com/vetores-gratis/imagem-de-perfil-de-personagem-de-desenho-animado-avatar-jovem_18591-55058.jpg"
-          class="lg:h-80 md:-64 h-40 rounded-full" alt="">
-      </div>
-      <div class="mt-8 md:mt-0 lg:justify-end  ">
-        <h1 class="text-3xl text-gray-900 text-center md:text-left font-bold">Olá, eu so João Diego</h1>
-        <p class="text-xl text-gray-800 text-center md:text-left">sou desenvolvedor web Trabalho a 7 anos
-          com programação web e mobile. Utilizo diversos frameworks e linguagens de programação. </p>
-        <div>
-
-        </div>
-      </div>
-    </div>
+  <div class="flex-1 overflow-hidden">
+    <app-home></app-home>
   </div>
 </div>
+
 <router-outlet></router-outlet>
