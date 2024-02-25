@@ -13,13 +13,13 @@ export class MenuService {
         title: 'Descricao1',
         description: 'Va direto para opção 1',
         link: '#',
-        icon: '',
+        icon: 'fa-solid fa-house',
       },
       {
         title: 'Descricao1',
         description: 'Va direto para opção 1',
         link: '#',
-        icon: '',
+        icon: '<fa-icon [icon]="house" class="object-contain h-6 w-6 mr-2"></fa-icon>',
       },
       {
         title: 'Descricao1',
