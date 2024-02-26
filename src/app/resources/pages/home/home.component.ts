@@ -8,16 +8,18 @@ import { DeputadosService } from 'src/app/services/deputados.service';
 })
 export class HomeComponent implements OnInit {
   deputados: DeputadosData;
-  
+
   constructor(private service: DeputadosService) {
-    this.deputados = { dados: [] };    
+    this.deputados = { dados: [] };
   }
 
   ngOnInit(): void {
-    this.getDeputados()  
+    this.getDeputados();
   }
 
-  getDeputados(): void {
+  getDeputados(): void {}
+
+  /*getDeputados(): void {
     this.service.getDeputados().subscribe(
       {
         next: (res) => {
@@ -28,5 +30,5 @@ export class HomeComponent implements OnInit {
       }, 
 
     );
-  }
+  }*/
 }
