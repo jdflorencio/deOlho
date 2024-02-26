@@ -10,6 +10,7 @@ import { SearchDeputadosComponent } from './components/search-deputados/search-d
 import { ListSearchComponent } from './components/search-deputados/list-search/list-search.component';
 import { InputSearchComponent } from './components/search-deputados/input-search/input-search.component';
 import { BtnSearchComponent } from './components/search-deputados/btn-search/btn-search.component';
+import { LiSearchComponent } from './components/search-deputados/list-search/li-search/li-search.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BtnSearchComponent } from './components/search-deputados/btn-search/btn
     ListSearchComponent,
     InputSearchComponent,
     BtnSearchComponent,
+    LiSearchComponent,
   ],
   imports: [CommonModule],
   exports: [HomeComponent, SobreComponent],
