@@ -6,6 +6,7 @@ import { NavDefaultComponent } from './nav-default/nav-default.component';
 import { NavMdComponent } from './nav-md/nav-md.component';
 import { MenuComponent } from './menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importe o FontAwesomeModule
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importe
   ],
   imports: [
     CommonModule, 
-    FontAwesomeModule  
+    FontAwesomeModule, 
+    RouterModule
   ],
   exports: [MenuComponent]
 })

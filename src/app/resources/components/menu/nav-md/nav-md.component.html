@@ -1,14 +1,22 @@
-<nav class="lg:visible invisible flex w-full -mt-80">
+<nav class="
+    lg:visible 
+    invisible 
+    flex w-full 
+    -mt-80">
     <ul class="text-left">
         <li *ngFor="let item of menuList" class="
                 list-inside border-b-2 
-                w-52 border-indigo-600 
-                font-bold border-opacity-25 
+                w-52 border-cyan-600 
+                font-medium 
+                border-opacity-25                
                 mx-8 mb-6 
                 pb-3 
-                text-gray-900 
-                hover:text-purple-900">
-            <a href="" class="flex justify-start">
+                text-slate-400
+                hover:text-cyan-800">
+            <a [routerLink]="item.link" 
+                [routerLinkActive]="['font-bold', 'text-cyan-100']" 
+                [routerLinkActiveOptions]="{exact: true}"
+                class="flex justify-start">
                 <fa-icon [icon]="house" class="object-contain h-6 w-6 mr-2"></fa-icon>
                 {{item.title}}
             </a>

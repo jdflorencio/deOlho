@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class AboutComponent {
-@Input()  public description: string ='Descrição 2024'
+@Input()  public description: string ='Desenvolvido por: João Diego'
 
 }

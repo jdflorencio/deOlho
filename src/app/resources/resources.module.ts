@@ -7,10 +7,13 @@ import { ContentHeaderComponent } from './pages/components/content-header/conten
 import { ContentFooterComponent } from './pages/components/content-footer/content-footer.component';
 import { HomeTitleComponent } from './pages/components/home-title/home-title.component';
 import { SearchDeputadosComponent } from './components/search-deputados/search-deputados.component';
-import { ListSearchComponent } from './components/search-deputados/list-search/list-search.component';
+
 import { InputSearchComponent } from './components/search-deputados/input-search/input-search.component';
 import { BtnSearchComponent } from './components/search-deputados/btn-search/btn-search.component';
-import { LiSearchComponent } from './components/search-deputados/list-search/li-search/li-search.component';
+
+import { CounterCharactersPipePipe } from '../core/pipes/counter-characters-pipe/counter-characters-pipe.pipe';
+import { FormsModule } from '@angular/forms';
+import { SearchFilterPipe } from './components/search-deputados/search-filter-pipe/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,12 @@ import { LiSearchComponent } from './components/search-deputados/list-search/li-
     ContentFooterComponent,
     HomeTitleComponent,
     SearchDeputadosComponent,
-    
-    ListSearchComponent,
     InputSearchComponent,
     BtnSearchComponent,
-    LiSearchComponent,
+    CounterCharactersPipePipe,
+    SearchFilterPipe,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [HomeComponent, SobreComponent],
 })
 export class ResourcesModule {}

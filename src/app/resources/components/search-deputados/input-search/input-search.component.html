@@ -1,3 +1,29 @@
 <div>
-    <input placeholder="Digite aqui o nome do deputado" type="text" class="w-full border rounded-md p-2">
+    <input [(ngModel)]="search" placeholder="Digite aqui o nome do deputado" type="text"
+        class="
+            w-full 
+            border rounded-md 
+            p-2  
+            bg-gradient-to-t from-gray-50 from-10%  to-gray-150 to-90%">
+    <ng-template [ngIf]="search.length >= 3">
+        <div class="
+        bg-gradient-to-t from-gray-50 from-10%  to-gray-150 to-90% 
+        border rounded-md p-3 font-medium">
+            <ul role="list" class="list-item z-50">
+                <li class=" hover:text--900 hover:bg-gray-400" hover:border hover:rounded-md
+                    *ngFor="let item of items | searchFilterPipe:search">
+                    <div class="flex p-2 mt-4 items-center gap-x-6">
+                        <img class=" h-14 w-12 rounded-full" [src]="item.urlFoto" alt="">
+                        <div>
+                            <h2 class="font-sans">{{item.nome}}</h2>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">
+                                {{item.siglaPartido}}/{{item.siglaUf}}</p>
+                        </div>
+                        <hr />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ng-template>
+    <!--<span>{{ search | counterCharactersPipe }}</span>-->
 </div>

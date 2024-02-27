@@ -1,13 +1,17 @@
 export type DeputadosData = {
-  dados: {
-    id: number;
-    uri: string;
-    nome: string;
-    siglaPartido: string;
-    uriPartido: string;
-    siglaUf: string;
-    idLegislatura: number;
-    urlFoto: string;
-    email: string;
-  }[];
+  dados: DeputadosType[];
 };
+
+export type DeputadosType = {
+  id: number;
+  uri: string;
+  nome: string;
+  siglaPartido: string;
+  uriPartido: string;
+  siglaUf: string;
+  idLegislatura: number;
+  urlFoto: string;
+  email: string;
+
+}
+

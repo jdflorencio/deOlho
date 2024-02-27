@@ -5,9 +5,7 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './resources/components/menu/menu.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { ResourcesModule } from './resources/resources.module';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +16,6 @@ import { ResourcesModule } from './resources/resources.module';
     ResourcesModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
