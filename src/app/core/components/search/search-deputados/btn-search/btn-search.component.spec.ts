@@ -8,7 +8,7 @@ describe('BtnSearchComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BtnSearchComponent]
+      declarations: [BtnSearchComponent],
     });
     fixture = TestBed.createComponent(BtnSearchComponent);
     component = fixture.componentInstance;

@@ -3,7 +3,15 @@ import { DeputadosType, ItemSelectedList } from 'src/app/models/deputadosData';
 
 @Component({
   selector: 'app-item-lista-search',
-  templateUrl: './item-lista-search.component.html',
+  template: `
+    <li
+      class=" hover:text--900 hover:bg-gray-100 hover:border hover:rounded-md"
+      *ngFor="let item of items | searchFilterPipe : digitou"
+      (click)="selecting(item)"
+    >
+      <app-content-item-search [item]="item"></app-content-item-search>
+    </li>
+  `,
 })
 export class ItemListaSearchComponent {
   @Input() digitou: string = '';

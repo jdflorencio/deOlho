@@ -7,6 +7,7 @@ import { InputSearchComponent } from './input-search/input-search.component';
 import { ListaSearchComponent } from './lista-search/lista-search.component';
 import { SearchFilterPipe } from './search-filter-pipe/search-filter.pipe'
 import { SearchDeputadosComponent } from './search-deputados.component';
+import { ContentItemSearchComponent } from './lista-search/content-item-search/ContentItemSearchComponent';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SearchDeputadosComponent } from './search-deputados.component';
     BtnSearchComponent,
     InputSearchComponent,
     ItemListaSearchComponent,
-    SearchDeputadosComponent
+    SearchDeputadosComponent,
+    ContentItemSearchComponent
   ],
   imports: [
     CommonModule,
