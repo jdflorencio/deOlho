@@ -7,6 +7,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ResourcesModule } from './resources/resources.module';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

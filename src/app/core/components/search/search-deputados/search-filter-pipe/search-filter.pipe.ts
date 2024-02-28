@@ -1,6 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DeputadosType } from '../../../../models/deputadosData';
-import { deputadosDataList } from '../../../../services/deputadosDataList';
+import { DeputadosType } from 'src/app/models/deputadosData';
+import { deputadosDataList } from 'src/app/services/deputadosDataList';
+
+
 @Pipe({
   name: 'searchFilterPipe',
 })

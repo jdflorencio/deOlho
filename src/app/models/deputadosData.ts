@@ -12,6 +12,9 @@ export type DeputadosType = {
   idLegislatura: number;
   urlFoto: string;
   email: string;
+};
 
-}
-
+export type ItemSelectedList = {
+  selected: DeputadosType;
+  isSelected: boolean;
+};
