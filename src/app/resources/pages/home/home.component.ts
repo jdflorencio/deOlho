@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private service: DeputadosService) {
     this.deputados = { dados: [] };
+    
   }
 
   ngOnInit(): void {
@@ -19,16 +20,5 @@ export class HomeComponent implements OnInit {
 
   getDeputados(): void {}
 
-  /*getDeputados(): void {
-    this.service.getDeputados().subscribe(
-      {
-        next: (res) => {
-          console.log(res.dados.length);
-          return this.deputados = res
-        },
-        error: (err) => console.error('not found'),
-      }, 
 
-    );
-  }*/
 }
