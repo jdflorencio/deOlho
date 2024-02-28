@@ -10,7 +10,10 @@
         bg-gradient-to-t from-gray-50 from-10%  to-gray-150 to-90% 
         border rounded-md p-3 font-medium">
             <ul role="list" class="list-item z-50">
-                <li class=" hover:text--900 hover:bg-gray-400" hover:border hover:rounded-md
+                <li class=" hover:text--900 
+                    hover:bg-gray-100
+                    hover:border hover:rounded-md
+                    " 
                     *ngFor="let item of items | searchFilterPipe:search">
                     <div class="flex p-2 mt-4 items-center gap-x-6">
                         <img class=" h-14 w-12 rounded-full" [src]="item.urlFoto" alt="">

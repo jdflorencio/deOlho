@@ -14,6 +14,7 @@ import { BtnSearchComponent } from './components/search-deputados/btn-search/btn
 import { CounterCharactersPipePipe } from '../core/pipes/counter-characters-pipe/counter-characters-pipe.pipe';
 import { FormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './components/search-deputados/search-filter-pipe/search-filter.pipe';
+import { ParlamentarComponent } from './pages/parlamentar/parlamentar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SearchFilterPipe } from './components/search-deputados/search-filter-pi
     BtnSearchComponent,
     CounterCharactersPipePipe,
     SearchFilterPipe,
+    ParlamentarComponent,
   ],
   imports: [CommonModule, FormsModule],
   exports: [HomeComponent, SobreComponent],
