@@ -4,27 +4,7 @@ import { SearchDeputadosService } from '../search-deputados.service';
 
 @Component({
   selector: 'app-input-search',
-  template: `
-    <div>
-      <input
-        [(ngModel)]="search"
-        (ngModelChange)="onSearchChange()"
-        placeholder="Digite aqui o nome do deputado"
-        type="text"
-        class="
-            w-full 
-            border rounded-md 
-            p-2  
-            bg-gradient-to-t from-gray-50 from-10%  to-gray-150 to-90%"
-      />
-      <ng-template [ngIf]="!selected && search.length >= 3">
-        <app-lista-search
-          (itemSelectedList)="ItemSelectedList($event)"
-          [digitou]="search"
-        ></app-lista-search>
-      </ng-template>
-    </div>
-  `,
+  templateUrl: 'input-search.component.html'
 })
 export class InputSearchComponent {
   search: string = '';
@@ -36,6 +16,7 @@ export class InputSearchComponent {
     if (data.selected) {
       this.searchDeputadosService.setSearchTerm(data);
       this.selected = data.isSelected;
+      this.search = data.selected.nome;
     }
   }
 
