@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { DeputadosData } from '../models/deputadosData';
+import { DeputadoType, DeputadosData } from '../models/deputadosData';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { deputadosDataList } from '../services/deputadosDataList';
@@ -14,21 +14,18 @@ export class DeputadosService {
   //list:DeputadosData;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = environment.cameraApi
+    this.baseUrl = environment.cameraApi;
     //this.list = {dados:[]}
 
-    console.log('>>',JSON.stringify(environment));
+    
   }
 
-  /*getDeputados(): Observable<DeputadosData> {
-    this.deputadosData = this.http.get<DeputadosData>(
-      `${this.baseUrl}`
-    );
-
+  getByDeputado(id: string): Observable<DeputadoType> {
+    this.deputadosData = this.http.get<DeputadosData>(`${this.baseUrl}/deputados/${id}`);
     return this.deputadosData;
-  }*/
+  }
 
-  getDeputados(): DeputadosData {
+  getAllDeputados(): DeputadosData {
     return deputadosDataList;
   }
 }

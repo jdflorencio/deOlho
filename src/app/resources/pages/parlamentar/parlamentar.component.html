@@ -1,13 +1,18 @@
-<div class="grid grid-rows-3 grid-flow-col gap-4 m-2">
-    <div class="bg-scroll h-60 overflow-y-auto" style="background-image: url(https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/160976.jpg)">
+<div class="flex flex-col m-6 animate-pulse" *ngIf="deputado">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-4xl font-bold tracking-tight text-black sm:text-4xl">{{deputado.dados.nomeCivil}} -
+            {{deputado.dados.ultimoStatus.nomeEleitoral}} </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-950">{{deputado.dados.ultimoStatus.descricaoStatus}}</p>
+    </div>
+    <div class="
+    bg-scroll
+    bg-contain
+        h-80 
+        bg-center
+        
+        
+        overflow-y-auto" style="background-image: url({{deputado.dados.ultimoStatus.urlFoto}})">
         <div class="col-span-2">
         </div>
-        <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-4xl font-bold tracking-tight  sm:text-6xl">Work with us</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-        </div>
     </div>
-    <div class="row-span-2 col-span-2 bg-yellow-300">
-
-    </div>
+</div>
